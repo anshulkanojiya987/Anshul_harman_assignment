@@ -1,0 +1,30 @@
+package A;
+import java.util.*;
+public class GradeAverage
+{
+	public static void main (String args[])
+	{
+		Scanner scn = new Scanner(System.in);
+		System.out.println("Enter the number of students");
+		int n = scn.nextInt();
+		int a[];
+		int t=0;
+		a = new int[n];
+		for(int i=0; i<n; i++)  
+		{  
+			System.out.print("Enter the Grade of "+i+"Student");  
+		    a[i]=scn.nextInt(); 
+		    if (a[i]>100 || a[i]<0)
+		    {
+		    	System.out.print("Invalid Input try again");
+			    i--;
+		      }
+		    else
+		    {
+		    	t=t+a[i];
+		      }
+		  }
+		System.out.println(" ");
+		System.out.println("The average is: "+t/n);
+	}
+}
